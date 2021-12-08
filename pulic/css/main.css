@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue-clr: hsl(225, 100%, 94%);
+    --bright-blue-clr:  hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --active-state: hsl(252, 76%, 69%);
+
+    --ff-primary: "Red Hat Display", sans-serif;
+
+    --box-shadow: 5px 10px 5px 2px rgba(112, 112, 112, 0.157);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+textarea, button, input {
+    font-family: var(--ff-primary);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue-clr);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--ff-primary);
+    line-height: 1.6;
+    color: var(--dark-blue);
+}
+
+.card {
+    background-color: var(--very-pale-blue);
+    border-radius: 15px;
+    margin: 10rem;
+    max-width: 450px;
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.image-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image {
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem 0.5rem 3rem;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+    padding: 0 3rem 0.1rem 3rem;
+}
+
+.plan-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 1.5rem 3rem;
+}
+
+.icon-div {
+    width: 50px;
+    height: 50px;
+    padding-top: 0.8rem;
+    margin-left: -3.5rem;
+}
+
+#icon {
+    width: 45px;
+    height: 45px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+#plan {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#price {
+    color: var(--desaturated-blue);
+}
+
+.change {
+    text-decoration: underline;
+    color: var(--bright-blue-clr);
+    font-weight: 700;
+    margin-left: 5rem;
+    padding-top: 0.7rem;
+    transition-duration: 0.4s;
+}
+
+#button {
+    width: 340px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--bright-blue-clr);
+    color: var(--very-pale-blue);
+    border-radius: 10px;
+    border: none;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin: 1.5rem 2rem 1.5rem 2rem;
+    transition-duration: 0.4s;
+    box-shadow: var(--box-shadow);
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 3rem 2.5rem 3rem;
+    transition-duration: 0.4s;
+}
+
+#button:hover {
+    background-color: var(--active-state);
+    cursor: pointer;
+}
+
+.change:hover{
+    color: var(--active-state);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel:hover{
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+    body{
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-color: var(--pale-blue-clr);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        margin: 6rem 2rem 6rem 2rem;
+        max-width: 320px;
+        max-height: 1000px;
+    }
+
+    .image-card{
+        width: 320px;
+    }
+
+    #image{
+        width: 320px;
+        height: auto;
+    }
+
+    .title{
+        font-size: 1.5rem;
+        padding: 2rem 1rem 0.7rem 1rem;
+    }
+
+    .text{
+        padding: 0 1.8rem 0.1rem 1.8rem;
+    }
+
+    .pricing {
+        margin: 1.5rem auto 1.5rem 3rem;
+    }
+
+    .change{
+        margin-left: 2.5rem;
+        padding-top: 0.7rem;
+    }
+
+    #button{
+        width: 270px;
+        margin: 1.5rem 2rem 1rem 2rem;
+    }
+}
